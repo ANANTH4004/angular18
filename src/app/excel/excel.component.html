@@ -1,0 +1,18 @@
+<p>excel works!</p>
+
+<button (click)="genereateExcel()">genereate Excel in new tab</button>
+<button (click)="openExcelInNewTab()">Open Excel in new tab</button>
+<div *ngIf="excelBlobUrl">
+  <h3>Excel Preview</h3>
+  <iframe [src]="excelBlobUrl | safeGuard" width="100%" height="600px"></iframe>
+</div>
+
+<div *ngIf="iframeSrc">
+  <h3>Excel Preview</h3>
+  <iframe
+    [src]="iframeSrc | safeGuard"
+    width="100%"
+    height="500px"
+    style="border: none"
+  ></iframe>
+</div>
