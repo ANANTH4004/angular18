@@ -1,0 +1,5 @@
+<div class="parent" style="border: 2px dotted green">
+  <p>Parent value {{ valueToSend }}</p>
+  <button (click)="generateValue()">Generate new value</button>
+  <app-signal-child [(valueFromParent)]="valueToSend"></app-signal-child>
+</div>
