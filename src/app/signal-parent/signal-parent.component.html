@@ -1,5 +1,8 @@
 <div class="parent" style="border: 2px dotted green">
   <p>Parent value {{ valueToSend }}</p>
   <button (click)="generateValue()">Generate new value</button>
-  <app-signal-child [(valueFromParent)]="valueToSend"></app-signal-child>
+  <app-signal-child
+    [(valueFromParent)]="valueToSend"
+    [(secondValue)]="valueToSend2"
+  ></app-signal-child>
 </div>

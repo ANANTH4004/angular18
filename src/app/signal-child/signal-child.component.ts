@@ -9,6 +9,7 @@ import { Component, model, ModelSignal } from '@angular/core';
 })
 export class SignalChildComponent {
   valueFromParent: ModelSignal<string> = model.required();
+  secondValue: ModelSignal<string> = model.required();
 
   changeValueInChild() {
     this.valueFromParent.update((value) => Math.random().toString());

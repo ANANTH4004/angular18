@@ -10,8 +10,12 @@ import { SignalChildComponent } from '../signal-child/signal-child.component';
 })
 export class SignalParentComponent {
   valueToSend!: string;
+  valueToSend2!: string;
 
   generateValue() {
     this.valueToSend = Math.random().toString();
+  }
+  generateValue2() {
+    this.valueToSend2 = Math.random().toString();
   }
 }
